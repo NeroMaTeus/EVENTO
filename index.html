@@ -1,106 +1,115 @@
+```html
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AR Evento - 12 Obras</title>
 
-    <!-- Librerías de A-Frame y MindAR -->
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
-    
+
     <style>
-      body { margin: 0; overflow: hidden; }
-      video { object-fit: cover !important; }
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        video {
+            object-fit: cover !important;
+        }
     </style>
-  </head>
-  <body>
-    
-    <a-scene 
-      mindar-image="imageTargetSrc: ./targets.mind; uiLoading: no; filterMinCF: 0.0001; filterBeta: 0.001;" 
-      color-space="sRGB" 
-      renderer="colorManagement: true, physicallyCorrectLights" 
-      vr-mode-ui="enabled: false" 
-      device-orientation-permission-ui="enabled: false">
+</head>
 
-      <!-- Carga de imágenes / assets -->
-      <a-assets>
-        <img id="cartel1" src="./cartel1.png">
-        <img id="cartel2" src="./cartel2.jpg">
-        <img id="cartel3" src="./cartel2.jpg">
-        <img id="cartel4" src="./cartel2.jpg">
-        <img id="cartel5" src="./cartel2.jpg">
-        <img id="cartel6" src="./cartel6.png">
-        <img id="cartel7" src="./cartel7.png">
-        <img id="cartel8" src="./cartel8.png">
-        <img id="cartel9" src="./cartel9.png">
-        <img id="cartel10" src="./cartel10.png">
-        <img id="cartel11" src="./cartel11.png">
-        <img id="cartel12" src="./cartel12.png">
-      </a-assets>
-      
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+<body>
+    <a-scene
+        mindar-image="imageTargetSrc: ./targets.mind; uiLoading: no; filterMinCF: 0.0001; filterBeta: 0.001;"
+        color-space="sRGB"
+        renderer="colorManagement: true"
+        vr-mode-ui="enabled: false"
+        device-orientation-permission-ui="enabled: false">
 
-      <!-- Target 0 -->
-      <a-entity mindar-image-target="targetIndex: 0">
-        <a-plane src="#cartel1" position="0 0 0" width="1" height="0.56" rotation="0 0 0"></a-plane>
-      </a-entity>
+        <a-assets>
+            <img id="cartel1" src="./cartel1.png">
+            <img id="cartel2" src="./cartel2.png">
+            <img id="cartel3" src="./cartel3.png">
+            <img id="cartel4" src="./cartel4.png">
+            <img id="cartel5" src="./cartel5.png">
+            <img id="cartel6" src="./cartel6.png">
+            <img id="cartel7" src="./cartel7.png">
+            <img id="cartel8" src="./cartel8.png">
+            <img id="cartel9" src="./cartel9.png">
+            <img id="cartel10" src="./cartel10.png">
+            <img id="cartel11" src="./cartel11.png">
+            <img id="cartel12" src="./cartel12.png">
+        </a-assets>
 
-      <!-- Target 1 -->
-      <a-entity mindar-image-target="targetIndex: 1">
-        <a-plane src="#cartel2" position="0 0 0" width="1" height="0.56" rotation="0 0 0"></a-plane>
-      </a-entity>
+        <a-camera
+            position="0 0 0"
+            look-controls="enabled: false">
+        </a-camera>
 
-      <!-- Target 2 -->
-      <a-entity mindar-image-target="targetIndex: 2">
-        <a-plane src="#cartel3" position="0 0 0" width="1" height="0.56" rotation="0 0 0"></a-plane>
-      </a-entity>
+        <!-- Imaginatio 1 -->
+        <a-entity id="imaginatio1" mindar-image-target="targetIndex: 0">
+            <a-plane src="#cartel1" position="0 0 0" width="1" height="0.56"></a-plane>
+        </a-entity>
 
-      <!-- Target 3 -->
-      <a-entity mindar-image-target="targetIndex: 3">
-        <a-plane src="#cartel4" position="0 0 0" width="1" height="0.56" rotation="0 0 0"></a-plane>
-      </a-entity>
+        <!-- Imaginatio 2 -->
+        <a-entity id="imaginatio2" mindar-image-target="targetIndex: 1">
+            <a-plane src="#cartel2" position="0 0 0" width="1" height="0.56"></a-plane>
+        </a-entity>
 
-      <!-- Target 4 -->
-      <a-entity mindar-image-target="targetIndex: 4">
-        <a-plane src="#cartel5" position="0 0 0" width="1" height="0.56" rotation="0 0 0"></a-plane>
-      </a-entity>
+        <!-- Imaginatio 3 -->
+        <a-entity id="imaginatio3" mindar-image-target="targetIndex: 2">
+            <a-plane src="#cartel3" position="0 0 0" width="1" height="0.56"></a-plane>
+        </a-entity>
 
-      <!-- Target 5 -->
-      <a-entity mindar-image-target="targetIndex: 5">
-        <a-plane src="#cartel6" position="0 0 0" width="1" height="0.56" rotation="0 0 0"></a-plane>
-      </a-entity>
+        <!-- Imaginatio 4 -->
+        <a-entity id="imaginatio4" mindar-image-target="targetIndex: 3">
+            <a-plane src="#cartel4" position="0 0 0" width="1" height="0.56"></a-plane>
+        </a-entity>
 
-      <!-- Target 6 -->
-      <a-entity mindar-image-target="targetIndex: 6">
-        <a-plane src="#cartel7" position="0 0 0" width="1" height="0.56" rotation="0 0 0"></a-plane>
-      </a-entity>
+        <!-- Imaginatio 5 -->
+        <a-entity id="imaginatio5" mindar-image-target="targetIndex: 4">
+            <a-plane src="#cartel5" position="0 0 0" width="1" height="0.56"></a-plane>
+        </a-entity>
 
-      <!-- Target 7 -->
-      <a-entity mindar-image-target="targetIndex: 7">
-        <a-plane src="#cartel8" position="0 0 0" width="1" height="0.56" rotation="0 0 0"></a-plane>
-      </a-entity>
+        <!-- Imaginatio 6 -->
+        <a-entity id="imaginatio6" mindar-image-target="targetIndex: 5">
+            <a-plane src="#cartel6" position="0 0 0" width="1" height="0.56"></a-plane>
+        </a-entity>
 
-      <!-- Target 8 -->
-      <a-entity mindar-image-target="targetIndex: 8">
-        <a-plane src="#cartel9" position="0 0 0" width="1" height="0.56" rotation="0 0 0"></a-plane>
-      </a-entity>
+        <!-- Imaginatio 7 -->
+        <a-entity id="imaginatio7" mindar-image-target="targetIndex: 6">
+            <a-plane src="#cartel7" position="0 0 0" width="1" height="0.56"></a-plane>
+        </a-entity>
 
-      <!-- Target 9 -->
-      <a-entity mindar-image-target="targetIndex: 9">
-        <a-plane src="#cartel10" position="0 0 0" width="1" height="0.56" rotation="0 0 0"></a-plane>
-      </a-entity>
+        <!-- Imaginatio 8 -->
+        <a-entity id="imaginatio8" mindar-image-target="targetIndex: 7">
+            <a-plane src="#cartel8" position="0 0 0" width="1" height="0.56"></a-plane>
+        </a-entity>
 
-      <!-- Target 10 -->
-      <a-entity mindar-image-target="targetIndex: 10">
-        <a-plane src="#cartel11" position="0 0 0" width="1" height="0.56" rotation="0 0 0"></a-plane>
-      </a-entity>
+        <!-- Imaginatio 9 -->
+        <a-entity id="imaginatio9" mindar-image-target="targetIndex: 8">
+            <a-plane src="#cartel9" position="0 0 0" width="1" height="0.56"></a-plane>
+        </a-entity>
 
-      <!-- Target 11 -->
-      <a-entity mindar-image-target="targetIndex: 11">
-        <a-plane src="#cartel12" position="0 0 0" width="1" height="0.56" rotation="0 0 0"></a-plane>
-      </a-entity>
+        <!-- Imaginatio 10 -->
+        <a-entity id="imaginatio10" mindar-image-target="targetIndex: 9">
+            <a-plane src="#cartel10" position="0 0 0" width="1" height="0.56"></a-plane>
+        </a-entity>
+
+        <!-- Imaginatio 11 -->
+        <a-entity id="imaginatio11" mindar-image-target="targetIndex: 10">
+            <a-plane src="#cartel11" position="0 0 0" width="1" height="0.56"></a-plane>
+        </a-entity>
+
+        <!-- Imaginatio 14, correspondiente al target 12 -->
+        <a-entity id="imaginatio12" mindar-image-target="targetIndex: 11">
+            <a-plane src="#cartel12" position="0 0 0" width="1" height="0.56"></a-plane>
+        </a-entity>
 
     </a-scene>
-
-  </body>
+</body>
 </html>
+```
